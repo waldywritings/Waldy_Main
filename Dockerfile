@@ -1,6 +1,6 @@
 FROM python:3.8.7
 
-WORKDIR /TamilanBotsZ
+WORKDIR /CineSandhadi
 
 COPY requirements.txt ./
 
