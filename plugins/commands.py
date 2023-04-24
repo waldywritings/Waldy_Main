@@ -23,14 +23,14 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs 🤖', url='https://t.me/CineSandhadhi')
+                InlineKeyboardButton('❤️‍🔥口凵尺 匚卄卂𠘨𠘨乇乚❤️‍🔥', url='https://telegram.me/Tg_Movies4u')
             ],
             [
-                InlineKeyboardButton('ℹ️ ʜᴇʟᴘ ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(script.PRIVATEBOT_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
+        await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
@@ -41,18 +41,19 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+        buttons = [
+            [
+            InlineKeyboardButton('➕ ʏᴏᴜ ᴄᴀɴ ᴀᴅᴅ ᴏᴜᴛ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs 🤖', url='https://t.me/CineSandhadhi'),
-            InlineKeyboardButton('💥 ᴍᴏᴠɪᴇs ♥️', url='https://t.me/+jMDf7TCmiy8xZGZl'),
+            InlineKeyboardButton('ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ', url='https://telegram.me/TG_Movies4u/81')
+        ],[
+            InlineKeyboardButton('❤️‍🔥口凵尺 匚卄卂𠘨𠘨乇乚❤️‍🔥', url='https://telegram.me/Tg_Movies4u'),
+            InlineKeyboardButton('👥 ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ', url='https://telegram.me/kumarvalimaibot')
             ],[
-            InlineKeyboardButton('💞 sᴜᴘᴘᴏʀᴛ 💞', url='https://t.me/CSAdmin69_bot'),
-            InlineKeyboardButton('👩‍💻 ᴄʜᴀɴɴᴇʟ ʟɪɴᴋꜱ ✨', url='https://t.me/cinesandhadhi/3134'),
+                InlineKeyboardButton('ʏᴏᴜ ᴄᴀɴ ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('👋 ᴇxᴛʀᴀ ʙᴜᴛᴛᴏɴs 👋', callback_data='about'),
-            ],[
-            InlineKeyboardButton('🔐 ᴄʟᴏsᴇ 🔐', callback_data='close_data')
+            InlineKeyboardButton('ᴊᴏɪɴ ʜᴇʀᴇ', url='https://telegram.me/Tg_Movies4u')
+            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -71,7 +72,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🤖", url=invite_link.invite_link
+                    "𝕮𝖑𝖎𝖈𝖐 𝕳𝖊𝖗𝖊 𝕿𝖔 𝕵𝖔𝖎𝖓🔥", url='https://telegram.me/Tg_Movies4u' #invite_link.invite_link
                 )
             ]
         ]
@@ -80,29 +81,27 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 ᴛʀʏ ᴀɢᴀɪɴ 🔄 ", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 ᴛʀʏ ᴀɢᴀɪɴ 🔄 ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴏʀ ᴜ ᴄᴀɴɴᴏᴛ ᴜsᴇ ᴍᴇ**",
+            text="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+        buttons = [
+            [
+             InlineKeyboardButton('ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ', url='https://telegram.me/how_to_use_tmafilesbot/2')
             ],[
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs 🤖', url='https://t.me/CineSandhadhi'),
-            InlineKeyboardButton('💥 ᴍᴏᴠɪᴇs ♥️', url='https://t.me/+jMDf7TCmiy8xZGZl'),
+            InlineKeyboardButton('❤️‍🔥口凵尺 匚卄卂𠘨𠘨乇乚❤️‍🔥', url='https://telegram.me/Tg_Movies4u'),
+            InlineKeyboardButton('👥 ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ', url='https://telegram.me/Kumarvalimaibot')
             ],[
-            InlineKeyboardButton('💞 sᴜᴘᴘᴏʀᴛ 💞', url='https://t.me/CSAdmin69_bot'),
-            InlineKeyboardButton('👩‍💻 ᴄʜᴀɴɴᴇʟ ʟɪɴᴋꜱ ✨', url='https://t.me/cinesandhadhi/3134'),
+                InlineKeyboardButton('ʏᴏᴜ ᴄᴀɴ ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('👋 ᴇxᴛʀᴀ ʙᴜᴛᴛᴏɴs 👋', callback_data='about'),
-            ],[
-            InlineKeyboardButton('🔐 ᴄʟᴏsᴇ 🔐', callback_data='close_data')
+            InlineKeyboardButton('ᴊᴏɪɴ ʜᴇʀᴇ', url='https://telegram.me/Tg_Movies4u')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -178,7 +177,7 @@ async def start(client, message):
         diff = int(l_msg_id) - int(f_msg_id)
         async for msg in client.iter_messages(int(f_chat_id), int(l_msg_id), int(f_msg_id)):
             if msg.media:
-                media = getattr(msg, msg.media)
+                media = getattr(msg, msg.media.value)
                 if BATCH_FILE_CAPTION:
                     try:
                         f_caption=BATCH_FILE_CAPTION.format(file_name=getattr(media, 'file_name', ''), file_size=getattr(media, 'file_size', ''), file_caption=getattr(msg, 'caption', ''))
@@ -186,7 +185,7 @@ async def start(client, message):
                         logger.exception(e)
                         f_caption = getattr(msg, 'caption', '')
                 else:
-                    media = getattr(msg, msg.media)
+                    media = getattr(msg, msg.media.value)
                     file_name = getattr(media, 'file_name', '')
                     f_caption = getattr(msg, 'caption', file_name)
                 try:
@@ -222,7 +221,7 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 )
             filetype = msg.media
-            file = getattr(msg, filetype)
+            file = getattr(msg, filetype.value)
             title = file.file_name
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
@@ -252,7 +251,6 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
@@ -268,7 +266,7 @@ async def channel_info(bot, message):
     else:
         raise ValueError("Unexpected type of CHANNELS")
 
-    text = '📑 **ɪɴᴅᴇxᴇᴅ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ**\n'
+    text = '📑 **Indexed channels/groups**\n'
     for channel in channels:
         chat = await bot.get_chat(channel)
         if chat.username:
@@ -276,7 +274,7 @@ async def channel_info(bot, message):
         else:
             text += '\n' + chat.title or chat.first_name
 
-    text += f'\n\n**ᴛᴏᴛᴀʟ:** {len(CHANNELS)}'
+    text += f'\n\n**Total:** {len(CHANNELS)}'
 
     if len(text) < 4096:
         await message.reply(text)
@@ -301,9 +299,9 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("ᴘʀᴏᴄᴇssɪɴɢ...⏳", quote=True)
+        msg = await message.reply("Processing...⏳", quote=True)
     else:
-        await message.reply('Rᴇᴘʟʏ ᴛᴏ ғɪʟᴇ ᴡɪᴛʜ /Delete ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴇʟᴇᴛᴇ', quote=True)
+        await message.reply('Reply to file with /delete which you want to delete', quote=True)
         return
 
     for file_type in ("document", "video", "audio"):
@@ -311,7 +309,7 @@ async def delete(bot, message):
         if media is not None:
             break
     else:
-        await msg.edit('ᴛʜɪs ɪs ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴇᴅɪᴀ')
+        await msg.edit('This is not supported file format')
         return
     
     file_id, file_ref = unpack_new_file_id(media.file_id)
@@ -320,7 +318,7 @@ async def delete(bot, message):
         '_id': file_id,
     })
     if result.deleted_count:
-        await msg.edit('ғɪʟᴇs ɪs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ')
+        await msg.edit('File is successfully deleted from database')
     else:
         file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
         result = await Media.collection.delete_many({
@@ -329,7 +327,7 @@ async def delete(bot, message):
             'mime_type': media.mime_type
             })
         if result.deleted_count:
-            await msg.edit('ғɪʟᴇs ɪs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ')
+            await msg.edit('File is successfully deleted from database')
         else:
             # files indexed before https://github.com/EvamariaTG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
@@ -339,9 +337,9 @@ async def delete(bot, message):
                 'mime_type': media.mime_type
             })
             if result.deleted_count:
-                await msg.edit('ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ')
+                await msg.edit('File is successfully deleted from database')
             else:
-                await msg.edit('ғɪʟᴇs ɴᴏᴛ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ')
+                await msg.edit('File not found in database')
 
 
 @Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
@@ -369,15 +367,15 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
-    await message.answer('ᴀᴍᴀᴢɪɴɢ ᴄᴏᴅᴇ ғʀᴏᴍ TᴀᴍɪʟBᴏᴛsZ')
-    await message.message.edit('sᴜᴄᴄᴇssғᴜʟʟ ᴅᴇʟᴇᴛᴇᴅ ɪɴᴅᴇxᴇᴅ ғɪʟᴇs')
+    await message.answer('Piracy Anedi Neramu')
+    await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
 
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Yᴏᴜ ᴀʀᴇ ᴀɴᴏɴʏᴍᴏᴜꜱ ᴀᴅᴍɪɴ. Uꜱᴇ /connect {message.chat.id} in PM")
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -388,10 +386,10 @@ async def settings(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Mᴀᴋᴇ ꜱᴜʀᴇ I'ᴍ ᴘʀᴇꜱᴇɴᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ!!", quote=True)
+                await message.reply_text("Make sure I'm present in your group!!", quote=True)
                 return
         else:
-            await message.reply_text("I'ᴍ ɴᴏᴛ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘꜱ!", quote=True)
+            await message.reply_text("I'm not connected to any groups!", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -478,7 +476,7 @@ async def settings(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
 
         await message.reply_text(
-            text=f"<b>Cʜᴀɴɢᴇ Yᴏᴜʀ Sᴇᴛᴛɪɴɢꜱ ғᴏʀ {title} ᴀs ᴜʀ ᴡɪsʜ ⚙</b>",
+            text=f"<b>Change Your Settings for {title} As Your Wish ⚙</b>",
             reply_markup=reply_markup,
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML,
@@ -489,10 +487,10 @@ async def settings(client, message):
 
 @Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
-    sts = await message.reply("ᴄʜᴇᴄᴋɪɴɢ ᴛᴇᴍᴘʟᴀᴛᴇ")
+    sts = await message.reply("Checking template")
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Yᴏᴜ ᴀʀᴇ ᴀɴᴏɴʏᴍᴏᴜꜱ ᴀᴅᴍɪɴ. Uꜱᴇ /connect {message.chat.id} in PM")
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -503,10 +501,10 @@ async def save_template(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Mᴀᴋᴇ ꜱᴜʀᴇ I'ᴍ ᴘʀᴇꜱᴇɴᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ!!", quote=True)
+                await message.reply_text("Make sure I'm present in your group!!", quote=True)
                 return
         else:
-            await message.reply_text("I'ᴍ ɴᴏᴛ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘꜱ!", quote=True)
+            await message.reply_text("I'm not connected to any groups!", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -528,4 +526,4 @@ async def save_template(client, message):
         return await sts.edit("No Input!!")
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
-    await sts.edit(f"Sᴜᴄᴄᴇꜱꜱғᴜʟʟʏ ᴄʜᴀɴɢᴇᴅ ᴛᴇᴍᴘʟᴀᴛᴇ ғᴏʀ {title} to\n\n{template}")
+    await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
