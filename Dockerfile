@@ -1,11 +1,11 @@
-FROM python:3.9.16
+FROM python:3.10
 
-WORKDIR /PremiumFilter
+WORKDIR /CineSandhadi
 
 COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY . . 
 
 CMD ["python3", "bot.py"]
