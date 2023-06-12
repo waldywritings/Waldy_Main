@@ -19,7 +19,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/82507b0c639b86897b5ea.jpg https://telegra.ph/file/e4a639cf5981d1124f01d.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/9a47c36c890538d2aa9e0.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
@@ -38,13 +38,13 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Helpline_4u')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ph_files')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "ɴᴀᴍᴇ: <i>{file_caption}</i> \n\nᴊᴏɪɴ ɴᴏᴡ: [Telugudubbing Movies](https://t.me/Telugudubbing_moviess)</b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "ɴᴀᴍᴇ: <i>{file_caption}</i> \n\nᴊᴏɪɴ ɴᴏᴡ: [Telugudubbing Movies](https://t.me/Telugudubbing_moviess)</b>")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🧿 ᴛɪᴛᴛʟᴇ :  {title} \n🌟 ʀᴀᴛɪɴɢ : {rating} \n🎭 ɢᴇɴʀᴇ : {genres} \n📆 ʀᴇʟᴇᴀsᴇ : {year} \n⏰ ᴅᴜʀᴀᴛɪᴏɴ : {runtime} \n🎙️ʟᴀɴɢᴜᴀɢᴇ : {languages} \n🔖 sʜᴏʀᴛ : {plot} \n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : @Telugudubbing_moviess")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "ɴᴀᴍᴇ: <i>{file_caption}</i> \n\nᴊᴏɪɴ ɴᴏᴡ: [PH FILES](https://t.me/Ph_Files)</b>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "ɴᴀᴍᴇ: <i>{file_caption}</i> \n\nᴊᴏɪɴ ɴᴏᴡ: [PH FILES](https://t.me/ph_files)</b>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🧿 ᴛɪᴛᴛʟᴇ :  {title} \n🌟 ʀᴀᴛɪɴɢ : {rating} \n🎭 ɢᴇɴʀᴇ : {genres} \n📆 ʀᴇʟᴇᴀsᴇ : {year} \n⏰ ᴅᴜʀᴀᴛɪᴏɴ : {runtime} \n🎙️ʟᴀɴɢᴜᴀɢᴇ : {languages} \n🔖 sʜᴏʀᴛ : {plot} \n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : @ph_files")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "False"), False)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
@@ -74,10 +74,10 @@ if SELF_DELETE == "False":
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "👇 ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ᴛʜɪs 👇"
-DOWNLOAD_TEXT_URL = "https://t.me/movies_seriesupdates/585"
+DOWNLOAD_TEXT_URL = "https://t.me/ph_files"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "🤗 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐩𝐥𝐞𝐚𝐬𝐞 🤗"
-CAPTION_BUTTON_URL = "https://t.me/Movies_arena_4u"
+CAPTION_BUTTON_URL = "https://t.me/ph_files"
 
    # Auto Delete For Bot Sending Files #
