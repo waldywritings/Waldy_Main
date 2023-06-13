@@ -12,7 +12,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = '22752527' #int(environ['API_ID'],15063227)
 API_HASH = 'c3a3c486a80a0549b01dfb825e30a917'#(environ['API_HASH'],'eedf0196b0533f361b51b5b7082358e9')
-BOT_TOKEN = '5975553933:AAG80GOZiH5Q5juZXSkZdt6xs8ABZQYPNp4' #(environ['BOT_TOKEN'],'5675651874:AAGUnKVobKXIG9Pi5mxxn00zdyFhFjYLk2A')
+BOT_TOKEN = '6226332883:AAE4ZyZilBS2UfG_Y9U9wmZMrCGgo-FB5LY' #(environ['BOT_TOKEN'],'6226332883:AAE4ZyZilBS2UfG_Y9U9wmZMrCGgo-FB5LY')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -31,7 +31,7 @@ AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://aegonjohnsnow2:Manideep2@cluster0.pplqzdv.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "pspkbotmanii")
+DATABASE_NAME = environ.get('DATABASE_NAME', "manipspkfilesbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-10019277289837'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ph_files')
