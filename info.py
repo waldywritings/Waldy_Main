@@ -12,7 +12,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = '22752527' #int(environ['API_ID'],15063227)
 API_HASH = 'c3a3c486a80a0549b01dfb825e30a917'#(environ['API_HASH'],'eedf0196b0533f361b51b5b7082358e9')
-BOT_TOKEN = '6226332883:AAE4ZyZilBS2UfG_Y9U9wmZMrCGgo-FB5LY' #(environ['BOT_TOKEN'],'6226332883:AAE4ZyZilBS2UfG_Y9U9wmZMrCGgo-FB5LY')
+BOT_TOKEN = '5998878412:AAECKtGuesibU3Fxt_fj4q5ti6CM7yybZXM' #(environ['BOT_TOKEN'],'5998878412:AAECKtGuesibU3Fxt_fj4q5ti6CM7yybZXM')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -25,12 +25,12 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL','-1001583857001')
+auth_channel = environ.get('AUTH_CHANNEL','-1001283160523')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://daaaavudaaaa_info1:daaaavudaaaa_info1@cluster0.ookasqc.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://aegonjohnsnow2:Manideep2@cluster0.pplqzdv.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "manipspkfilesbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_filess')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-10019277289837'))
