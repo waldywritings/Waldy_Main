@@ -37,7 +37,7 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001405818976'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'WaldyWritings_bot')
 
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption} \n Size :- <i>{file_size}</i> \n [WALDY WRITINGS](https://telegram.me/Waldy_Writings)</b>")
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption} \n Size :- <i>{file_size}</i> \n Join [WALDY WRITINGS](https://telegram.me/Waldy_Writings)</b> ")
