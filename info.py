@@ -10,39 +10,39 @@ def is_enabled(value, default):
         return default
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = '22752527' #int(environ['API_ID'],15063227)
-API_HASH = 'c3a3c486a80a0549b01dfb825e30a917'#(environ['API_HASH'],'eedf0196b0533f361b51b5b7082358e9')
-BOT_TOKEN = '5998878412:AAECKtGuesibU3Fxt_fj4q5ti6CM7yybZXM' #(environ['BOT_TOKEN'],'5998878412:AAECKtGuesibU3Fxt_fj4q5ti6CM7yybZXM')
+API_ID = '22217932' #int(environ['API_ID'],22217932)
+API_HASH = 'd722db74da63a9e46ba2dcba49c69a4c'#(environ['API_HASH'],'d722db74da63a9e46ba2dcba49c69a4c')
+BOT_TOKEN = '6098378295:AAFC-W4vOQR-urC-kwhHwPCFNbxh_gek42g' #(environ['BOT_TOKEN'],'6098378295:AAFC-W4vOQR-urC-kwhHwPCFNbxh_gek42g')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/9a47c36c890538d2aa9e0.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/61fea9dc202b725fbf90f.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5262827424 969099516').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1001750398333").split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1395772318 969099516').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1001798968357").split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL','-1001283160523')
+auth_channel = environ.get('AUTH_CHANNEL','-1001962622157')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://aegonjohnsnow2:Manideep2@cluster0.pplqzdv.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "manipspkfilesbot")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_filess')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-10019277289837'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ph_files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://WALDY:WALDY@cluster0.7at5zew.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "waldyfilesbot")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'waldyfilesbot')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001405818976'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'WaldyWritings_bot')
 
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption} \n Size :- <i>{file_size}</i> \n [PH_FILES](https://telegram.me/PH_FILES)</b>")
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption} \n Size :- <i>{file_size}</i> \n [WALDY WRITINGS](https://telegram.me/Waldy_Writings)</b>")
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption} \n Size :- <i>{file_size}</i> \n Join [PH_FILES](https://telegram.me/PH_FILES)</b> ")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption} \n Size :- <i>{file_size}</i> \n Join [WALDY WRITINGS](https://telegram.me/Waldy_Writings)</b> ")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "Hey {message.from_user.mention}, \n Here is the result for your {query} \n <b>🏷 Title</b>: <a href={url}>{title}</a> \n 📆 Year: <a href={url}/releaseinfo>{year}</a> \n 🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.) \n ☀️ Languages : <code>{languages}</code> \n 📀 RunTime: {runtime} Minutes \n 📆 Release Info : {release_date} \n 🎛 Countries : <code>{countries}</code> \n \n Requested by : {message.from_user.mention} \n Powered By @PH_FILES")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "Hey {message.from_user.mention}, \n Here is the result for your {query} \n <b>🏷 Title</b>: <a href={url}>{title}</a> \n 📆 Year: <a href={url}/releaseinfo>{year}</a> \n 🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.) \n ☀️ Languages : <code>{languages}</code> \n 📀 RunTime: {runtime} Minutes \n 📆 Release Info : {release_date} \n 🎛 Countries : <code>{countries}</code> \n \n Requested by : {message.from_user.mention} \n Powered By @Waldy_Writings')
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "False"), False)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
