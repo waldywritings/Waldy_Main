@@ -21,14 +21,34 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/Cs-04-23')).split()
 
 # Admins, Channels & Users
+# List of authorized users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '969099516, 1758343727').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001543052371 ').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001543052371').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '-1001780128949')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
+
+# Handler for /start command
+def start(update: Update, context):
+    user_id = update.message.from_user.id
+
+    if user_id in AUTH_USERS:
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome, authorized user!")
+    else:
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Sorry, you are not authorized.")
+
+# Handler for all other messages
+def message_handler(update: Update, context):
+    user_id = update.message.from_user.id
+
+    if user_id in AUTH_USERS:
+        # Process the authorized user's message
+        pass
+    else:
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Sorry, you are not authorized.")
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
