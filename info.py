@@ -12,7 +12,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = '22217932' #int(environ['API_ID'],22217932)
 API_HASH = 'd722db74da63a9e46ba2dcba49c69a4c'#(environ['API_HASH'],'d722db74da63a9e46ba2dcba49c69a4c')
-BOT_TOKEN = '6098378295:AAFC-W4vOQR-urC-kwhHwPCFNbxh_gek42g' #(environ['BOT_TOKEN'],'6098378295:AAFC-W4vOQR-urC-kwhHwPCFNbxh_gek42g')
+BOT_TOKEN = '6129400595:AAHUrS6YaMRzTyFMez1UjE1r6L7l2kqcq1k' #(environ['BOT_TOKEN'],'6098378295:AAFC-W4vOQR-urC-kwhHwPCFNbxh_gek42g')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -20,7 +20,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/61fea9dc202b725fbf90f.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1395772318 969099516').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1395772318').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1001798968357").split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 
@@ -30,10 +30,10 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Waldy:Waldy@cluster0.qqvdfue.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Harsha:harsha@waldysearchprvt.jsyxwtb.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "waldyfilesbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'waldyfilesbot')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001405818976'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001911686773'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'WaldyWritings_bot')
 
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_caption} \n Size :- <i>{file_size}</i> \n [WALDY WRITINGS](https://telegram.me/Waldy_Writings)</b>")
