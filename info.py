@@ -52,10 +52,8 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
-AUTO_DELETE_SECONDS = int(environ.get('AUTO_DELETE_SECONDS', 300))
-AUTO_DELETE = environ.get('AUTO_DELETE', True)
-if AUTO_DELETE == "True":
-    AUTO_DELETE = True
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 100))
+SELF_DELETE =  environ.get('SELF_DELETE', 'True')
 
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
