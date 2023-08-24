@@ -12,7 +12,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = '22217932' #int(environ['API_ID'],22217932)
 API_HASH = 'd722db74da63a9e46ba2dcba49c69a4c'#(environ['API_HASH'],'d722db74da63a9e46ba2dcba49c69a4c')
-BOT_TOKEN = '6676126762:AAEqdO154Tj2ZzEto5k5ZTm0nTlrRbw_RK4' #(environ['BOT_TOKEN'],'6098378295:AAFC-W4vOQR-urC-kwhHwPCFNbxh_gek42g')
+BOT_TOKEN = '5872790611:AAEli03VCSClXIdeSxYRYJvI0vFxgm6586g' #(environ['BOT_TOKEN'],'6098378295:AAFC-W4vOQR-urC-kwhHwPCFNbxh_gek42g')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -30,10 +30,10 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Harsha:harsha@waldysearchprvt.jsyxwtb.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "waldyfilesbot")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'waldyfilesbot')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001896536431'))
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://brucewayne:brucewayne@cluster0.msoafcl.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "bruce1")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_filess')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001878333867'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'WaldyWritings_bot')
 
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
