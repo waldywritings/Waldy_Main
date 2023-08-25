@@ -11,8 +11,8 @@ def is_enabled(value, default):
         return default
 
 class script(object):
-    START_TXT = """<b>ʜᴇʟʟᴏ</b> {},
-<b>ɪ ᴀᴍ <a href=https://t.me/{}>ᴡᴀʟᴅʏ ᴘɪʀᴀᴄʏ ꜱᴇᴀʀᴄʜ ʙᴏᴛ 2.0</a>, ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴍᴏᴠɪᴇꜱ ʜᴇʀᴇ, ᴊᴜꜱᴛ ᴛʏᴘᴇ ᴛʜᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ. ᴛʜᴇ ʙᴏᴛ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ʀᴇꜱᴜʟᴛꜱ ᴀɴᴅ ꜱᴇʟᴇᴄᴛ ᴡʜɪᴄʜ ꜰɪʟᴇ ᴀɴᴅ ᴡʜɪᴄʜ ꜱɪᴢᴇ ʏᴏᴜ ᴡᴀɴᴛ😉😍</b> \n \n <b>𝐁𝐨𝐭 𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐁𝐲 :- @Waldy_Writings \n 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 :- @Waldy_Writings</b>"""
+    START_TXT = """
+<b>👋💙 𝙷𝙴𝙻𝙻𝙾 𝙼𝙰𝚆𝙰\n\nMʏ Nᴀᴍᴇ Iꜱ 𝚆𝙰𝙻𝙳𝚈 𝚆𝚁𝙸𝚃𝙸𝙽𝙶𝚂 𝚂𝙴𝙰𝚁𝙲𝙷 𝙱𝙾𝚃,\nI Cᴀɴ Pʀᴏᴠɪᴅᴇ HD Mᴏᴠɪᴇꜱ & Oᴛᴛ Rᴇʟᴇᴀꜱᴇᴅ Mᴏᴠɪᴇꜱ Hᴇʀᴇ... Jᴜꜱᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Aɴᴅ Mᴀᴋᴇ Mᴇ Aᴅᴍɪɴ Oʀ Jᴜꜱᴛ Aꜱᴋ Mᴏᴠɪᴇ Hᴇʀᴇ...\n\nIꜰ Yᴏᴜ Wᴀɴᴛ Pɪʀᴀᴄʏ Mᴏᴠɪᴇꜱ, Tʜᴇɴ Aꜱᴋ Hᴇʀᴇ @Waldy_Piracy_Search_Bot...\n\nBᴏᴛ Mᴀᴅᴇ Bʏ @Waldy_Writings 💙🙇‍♂️</b>"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """✯ 𝐁𝐨𝐭 𝐍𝐚𝐦𝐞: {}
